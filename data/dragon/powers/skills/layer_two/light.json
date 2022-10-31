@@ -6,7 +6,7 @@
         "effect": {
             "effect": "hero_of_the_village",
             "duration": 40,
-            "amplifier": 0,
+            "amplifier": 1,
             "show_particles": false,
             "show_icon": true
         }
