@@ -7,8 +7,8 @@
             "group": "undead"
         },
         "modifier":{
-            "operation": "addition",
-            "value": 5.0
+            "operation": "multiply_total_multiplicative",
+            "value": 1
         }
     },
     "bad_wither": {
@@ -45,8 +45,8 @@
             ]
         },
         "modifier":{
-            "operation": "addition",
-            "value": 5.0
+            "operation": "multiply_total_multiplicative",
+            "value": 0.8
         }
     },
     "hidden": true
