@@ -4,7 +4,7 @@
         {
             "attribute": "minecraft:generic.movement_speed",
             "operation": "addition",
-            "value": -0.02
+            "value": -0.03
         },
         {
             "attribute": "minecraft:generic.armor",
