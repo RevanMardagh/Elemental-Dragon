@@ -1,40 +1,36 @@
 {
+    "hidden": true,
     "type": "origins:multiple",
-    "villager_thank":{
-        "type": "origins:action_over_time",
-        "interval": 10,
-        "entity_action": {
-            "type": "origins:and",
-            "actions": [
-                {
-                    "type": "origins:execute_command",
-                    "command": "execute at @s as @e[type=villager,distance=..7] run data merge entity @s {Gossips:[{Target:[I;1,1,1,1],Type:'minor_positive',Value:25}]}",
-                    "permission_level": 2
-                },
-                {
-                    "type": "origins:execute_command",
-                    "command": "execute at @s as @e[type=villager,distance=..7] run data modify entity @s Gossips[{Target:[I;1,1,1,1]}].Target set from entity @p[advancements={dragon:base_skills/light=true}] UUID",
-                    "permission_level": 2
-                }
-            ]
-        },
-        "condition":{
+    "villager_thank": {
+        "condition": {
+            "inverted": true,
             "type": "origins:advancement",
-            "advancement": "dragon:layer_two/light",
-            "inverted": true
+            "advancement": "dragon:layer_two/light"
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "hero_of_the_village",
+                "duration": 100,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
         }
     },
-    "more_luck":{
+    "more_luck": {
         "type": "origins:attribute",
         "modifier": {
             "attribute": "minecraft:generic.luck",
             "operation": "addition",
             "value": 10
-        }
+        },
+        "update_health": false
     },
     "wings": {
         "type": "origins:elytra_flight",
         "render_elytra": true
-    },
-    "hidden": true
+    }
 }
