@@ -3,26 +3,32 @@
         "type": "origins:and",
         "conditions": [
             {
-                "type": "origins:daytime",
-                "inverted": true
+                "inverted": true,
+                "type": "origins:daytime"
             },
             {
                 "type": "origins:exposed_to_sky"
             }
         ]
     },
-    "type": "origins:conditioned_attribute",
-    "modifiers": [
-        {
-            "attribute": "minecraft:generic.attack_damage",
-            "operation": "addition",
-            "value": -8
-        },
-        {
-            "attribute": "minecraft:generic.movement_speed",
-            "operation": "addition",
-            "value": -0.045
-        }
-    ],
-    "tick_rate": 5
+    "type": "origins:action_over_time",
+    "interval": 100,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "slowness",
+                "duration": 120,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            },
+            {
+                "effect": "weakness",
+                "duration": 120,
+                "show_particles": true,
+                "show_icon": true
+            }
+        ]
+    }
 }
