@@ -1,35 +1,50 @@
 {
+    "hidden": true,
     "type": "origins:multiple",
-    "fiah_pawnch":{
+    "fiah_pawnch": {
+        "condition": {
+            "type": "origins:equipped_item",
+            "equipment_slot": "mainhand",
+            "item_condition": {
+                "type": "origins:empty"
+            }
+        },
         "type": "origins:target_action_on_hit",
         "entity_action": {
             "type": "origins:set_on_fire",
-            "duration": 3
+            "duration": 2
         },
-        "cooldown": 1
+        "cooldown": 20
     },
-    "no_cold_biome":{
-        "condition":{
-            "type":"origins:biome",
-            "condition":{
+    "no_cold_biome": {
+        "condition": {
+            "type": "origins:biome",
+            "condition": {
                 "type": "origins:temperature",
                 "comparison": "<=",
                 "compare_to": 0.3
             }
         },
-        "modifiers": [
-            {
-                "attribute": "minecraft:generic.attack_damage",
-                "operation": "addition",
-                "value": -8
-            },
-            {
-                "attribute": "minecraft:generic.movement_speed",
-                "operation": "addition",
-                "value": -0.045
-            }
-        ],
-        "type": "origins:conditioned_attribute"
-    },
-    "hidden": true
+        "type": "origins:action_over_time",
+        "interval": 40,
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effects": [
+                {
+                    "effect": "slowness",
+                    "duration": 100,
+                    "amplifier": 1,
+                    "show_particles": true,
+                    "show_icon": true
+                },
+                {
+                    "effect": "weakness",
+                    "duration": 100,
+                    "amplifier": 0,
+                    "show_particles": true,
+                    "show_icon": true
+                }
+            ]
+        }
+    }
 }
