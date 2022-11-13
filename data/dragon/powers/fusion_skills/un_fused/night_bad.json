@@ -19,7 +19,7 @@
             {
                 "effect": "slowness",
                 "duration": 140,
-                "amplifier": 0,
+                "amplifier": 1,
                 "show_particles": true,
                 "show_icon": true
             },
