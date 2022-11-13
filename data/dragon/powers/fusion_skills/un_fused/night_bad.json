@@ -12,20 +12,20 @@
         ]
     },
     "type": "origins:action_over_time",
-    "interval": 40,
+    "interval": 60,
     "entity_action": {
         "type": "origins:apply_effect",
         "effects": [
             {
                 "effect": "slowness",
-                "duration": 120,
+                "duration": 140,
                 "amplifier": 0,
                 "show_particles": true,
                 "show_icon": true
             },
             {
                 "effect": "weakness",
-                "duration": 120,
+                "duration": 140,
                 "show_particles": true,
                 "show_icon": true
             }
