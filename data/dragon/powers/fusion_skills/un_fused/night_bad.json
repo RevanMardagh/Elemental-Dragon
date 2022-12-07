@@ -26,6 +26,7 @@
             {
                 "effect": "weakness",
                 "duration": 140,
+                "amplifier": 1,
                 "show_particles": true,
                 "show_icon": true
             }

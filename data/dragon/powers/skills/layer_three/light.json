@@ -46,7 +46,7 @@
         },
         "modifier":{
             "operation": "multiply_total_multiplicative",
-            "value": 0.8
+            "value": 1
         }
     },
     "hidden": true
